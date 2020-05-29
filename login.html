@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+}
+
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+
+.success {
+  background-color: #ddffdd;
+  border-left: 6px solid #4CAF50;
+}
+
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+}
+
+
+.warning {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+}
+</style>
+</head>
+<body>
+
+<div class="warning">
+  <p><strong>Warning: </strong>The current username is "admin" and the password is "password".</p>
+</div>
+</div>
+</body>
+</html>
+
+<form>
+    <input type="text" placeholder="Username" id="text1" /><br />
+    <input type="password" placeholder="Password" id="text2" /><br />
+    <input type="button" value="Login"  onclick="javascript:validate()" />
+</form>
+<script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("text1").value == "admin"
+       && document.getElementById("text2").value == "password" )
+    {
+        alert( "Correct!" );
+        location.href="main.html";
+    }
+    else
+    {
+        alert( "Incorrect. Please Try Again." );
+        location.href="login.html";
+    }
+}
+</script>
